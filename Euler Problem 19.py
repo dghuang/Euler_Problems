@@ -1,9 +1,11 @@
-r = 1901
-b = 29
-c = 0
+#this is a calendar counting program, the specifics are on Project Euler
 
-while r != 2001:
-	y = {1 : range(1,32),
+year = 1901
+b = 29
+Sundays = 0
+
+while year != 2001:
+	month_list = {1 : range(1,32),
 	2 : range(1, 29),
 	3 : range(1, 32),
 	4 : range(1, 31),
@@ -15,20 +17,20 @@ while r != 2001:
 	10 : range(1, 32),
 	11 : range(1, 31),
 	12 : range(1, 32),}
-	if r % 4 == 0:
-		y[2] = range(1, 30)
-		for x in y:
-			a = len(y[x]) % 7
+	if year % 4 == 0:
+		month_list[2] = range(1, 30)
+		for month in month_list:
+			a = len(month_list[month]) % 7
 			b = b + a
 			if b % 7 == 6:
-				c = c + 1
-		r = r + 1
+				Sundays = Sundays + 1
+		year = year + 1
 	else:
-		for x in y:
-			a = len(y[x]) % 7
+		for month in month_list:
+			a = len(month_list[month]) % 7
 			b = b + a
 			if b % 7 == 6:
-				c = c + 1
-		r = r + 1
+				Sundays = Sundays + 1
+		year = year + 1
 
-print c
+print Sundays
