@@ -1,0 +1,1 @@
+#This problem was done on paper as it was easier for me to do the math in my head
