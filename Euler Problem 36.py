@@ -14,6 +14,7 @@ def isPalindrome(n):
 
 sum = 0
 for x in xrange(1, 1000000):
+    #convert the number to binary
     b = int(bin(x)[2:])
     if isPalindrome(x) & isPalindrome(b):
         sum += x
